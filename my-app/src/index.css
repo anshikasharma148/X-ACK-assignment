@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Apply Bruno Ace font to the logo */
+.logo {
+  font-family: 'Bruno Ace', sans-serif;
+}
+
+/* Apply Inter font to the nav links */
+.nav-link {
+  font-family: "Inter", sans-serif;
+}
+.text-custom {
+  color: #F1F1EF99; /* Semi-transparent color */
+}
