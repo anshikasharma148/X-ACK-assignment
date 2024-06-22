@@ -1,4 +1,7 @@
+// src/Navbar.js
+
 import React, { useState } from 'react';
+import './Navbar.css'; // Import the CSS file
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +14,10 @@ export default function Navbar() {
     { title: 'Other' }
   ];
 
-  const NAV_CLASS = "bg-black text-white p-4 flex justify-between items-center";
-  const BUTTON_CLASS = "focus:outline-none flex items-center";
+  const NAV_CLASS = "bg-black text-white p-4 flex justify-between items-center glow-navbar";
+  const BUTTON_CLASS = "focus:outline-none flex items-center glow-button";
   const GROUP_CLASS = "relative group";
-  const CENTER_CONTAINER_CLASS = "hidden md:flex justify-center items-center space-x-6"; // Adjusted for desktop view
+  const CENTER_CONTAINER_CLASS = "hidden md:flex justify-center items-center space-x-4 ml-9"; // Adjusted for desktop view
 
   return (
     <nav className={NAV_CLASS}>
@@ -42,24 +45,23 @@ export default function Navbar() {
       <div className={CENTER_CONTAINER_CLASS}>
         {NAV_LINKS.map((link, index) => (
           <div key={index} className={GROUP_CLASS}>
-            <button className={`${BUTTON_CLASS} nav-link`}>
+            <a href="#" className="glow-nav-link">
               {link.title}
-              <span className="ml-2">
+              <span>
                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.01221 0.101562L5.2251 3.88867L1.42432 0.101562L0.166504 1.35938L5.21143 6.66406L10.27 1.35938L9.01221 0.101562Z" fill="white"/>
                 </svg>
               </span>
-            </button>
+            </a>
           </div>
         ))}
       </div>
 
       {/* Right Section for Log in/Sign up */}
       <div className="hidden md:flex space-x-4 mr-5">
-        <button className={BUTTON_CLASS}>Log in</button>
+        <a href="#" className="login-link">Log in</a> {/* Simple link without glow */}
         <button
-          className="bg-black text-white py-2 px-4 rounded-full shadow-lg"
-          style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))' }}
+          className="bg-black text-white py-2 px-4 rounded-full glow-button sign-up-button" // Restored class names for sign-up button
         >
           Sign up
         </button>
@@ -77,8 +79,7 @@ export default function Navbar() {
             Log in
           </button>
           <button
-            className="bg-black text-white py-2 px-4 rounded-full shadow-lg"
-            style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))' }}
+            className="bg-black text-white py-2 px-4 rounded-full glow-button"
             onClick={() => setIsOpen(false)}
           >
             Sign up

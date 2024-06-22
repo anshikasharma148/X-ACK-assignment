@@ -1,17 +1,18 @@
 import React from 'react';
+import './Benefits.css';
 
 // Shared base styles for the cards with gradient background and handling overflow
-const baseCardClass = "rounded-2xl shadow-lg transition transform hover:scale-105 p-4 overflow-hidden";
+const baseCardClass = "rounded-2xl shadow-lg transition transform hover:scale-105 p-4 overflow-hidden glowing-card";
 const gradientBackground = "bg-gradient-to-b from-[rgba(255,255,255,0.04)] via-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0.12)]";
 
 // Specific classes for titles and text
-const titleClass = "text-xl font-semibold mb-2 text-gray-100 dark:text-gray-300";
+const titleClass = "text-xl font-semibold mb-2 text-gray-100 dark:text-gray-300 glowing-heading";
 const textClass = "font-inter text-base font-normal leading-6 text-custom";
 
 const ThingsUsersLove = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center p-8">
-      <h1 className="text-3xl md:text-[56px] font-medium leading-tight md:leading-[64px] tracking-tight text-center font-inter mb-10 md:mb-[5rem] mt-4">
+      <h1 className="text-3xl md:text-[56px] font-medium leading-tight md:leading-[64px] tracking-tight text-center font-inter mb-10 md:mb-[5rem] mt-4 glowing-heading">
         Things users love <br /> <span className="text-[rgba(255,255,255,0.6)]">about X-ACK</span>
       </h1>
       <div className="relative w-full flex flex-wrap gap-6 justify-center">

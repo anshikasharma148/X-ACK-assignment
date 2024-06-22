@@ -1,8 +1,9 @@
 import React from 'react';
-import dashboard from './../../assets/main-img.png'; // Replace with your actual image import
-import leftImage from './../../assets/imageleft.png'; // Replace with your left image import
-import rightImage from './../../assets/imageright.png'; // Replace with your right image import
-import backgroundImage from './../../assets/backimg.png'; // Adjust the path if necessary
+import dashboard from './../../assets/main-img.png';
+import leftImage from './../../assets/imageleft.png';
+import rightImage from './../../assets/imageright.png';
+import backgroundImage from './../../assets/backimg.png';
+import './Hero.css'
 
 const gradientClass = 'bg-gradient-to-b from-black to-green-900';
 const buttonClass = 'text-white py-2 px-6 rounded-full shadow-lg transition-colors duration-300 inline-flex items-center justify-center';
@@ -64,7 +65,7 @@ const MainComponent = () => {
         style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right', backgroundSize: 'contain' }}
       ></div>
       <div className="w-full max-w-4xl text-center px-4 mt-16 md:mt-32 relative z-10">
-        <h1 className="text-4xl md:text-[68px] font-medium leading-tight md:leading-[80px] tracking-tight text-transparent bg-clip-text bg-text-gradient mb-8 mx-auto flex items-center justify-center md:w-[653.69px] md:h-[160px] md:ml-24">
+        <h1 className="text-4xl md:text-[68px] font-medium leading-tight md:leading-[80px] tracking-tight text-transparent bg-clip-text bg-text-gradient mb-8 mx-auto flex items-center justify-center md:w-[653.69px] md:h-[160px] md:ml-24 glow-effect">
           Most Awaited!
         </h1>
         <p className="text-base md:text-lg text-gray-400 mb-8">
@@ -72,7 +73,7 @@ const MainComponent = () => {
           offer will come here.
         </p>
         <div className="flex justify-center mb-32 md:mb-[8rem]">
-          <button className={buttonClass} style={{
+          <button className={`${buttonClass} glow-button`} style={{
             width: '193.79px',
             height: '47.69px',
             gap: '0px',
