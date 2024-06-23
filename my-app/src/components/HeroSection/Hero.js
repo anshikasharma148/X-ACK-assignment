@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import dashboard from './../../assets/main-img.png';
 import leftImage from './../../assets/imageleft.png';
 import rightImage from './../../assets/imageright.png';
 import backgroundImage from './../../assets/backimg.png';
-import './Hero.css'
+import './Hero.css';
 
 const gradientClass = 'bg-gradient-to-b from-black to-green-900';
 const buttonClass = 'text-white py-2 px-6 rounded-full shadow-lg transition-colors duration-300 inline-flex items-center justify-center';
@@ -40,8 +40,34 @@ const ArrowIcon = () => (
 );
 
 const MainComponent = () => {
+  useEffect(() => {
+    const rippleContainer = document.getElementById('ripple-container');
+    
+    const createRipple = (event) => {
+      const ripple = document.createElement('div');
+      ripple.classList.add('ripple');
+      ripple.style.top = `${event.clientY}px`;
+      ripple.style.left = `${event.clientX}px`;
+      rippleContainer.appendChild(ripple);
+      
+      ripple.addEventListener('animationend', () => {
+        ripple.remove();
+      });
+    };
+
+    window.addEventListener('mousemove', createRipple);
+
+    return () => {
+      window.removeEventListener('mousemove', createRipple);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
+      {/* Water Ripple Container */}
+      <div id="ripple-container" className="ripple-container"></div>
+
+      {/* Background and Other Content */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <div className={`${gradientClass} w-full h-2/3`}></div>
         <div className="bg-black w-full h-1/3"></div>

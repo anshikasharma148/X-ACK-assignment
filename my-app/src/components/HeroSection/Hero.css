@@ -44,3 +44,35 @@
                 0 0 30px rgba(255, 255, 255, 0.4);
   }
 }
+
+/* Ripple Effect Container */
+.ripple-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1; /* Place it above the background but below main content */
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  transform: scale(0);
+  animation: ripple-animation 1s ease-out;
+}
+
+/* Ripple Animation */
+@keyframes ripple-animation {
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
