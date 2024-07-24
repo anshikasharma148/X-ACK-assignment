@@ -56,7 +56,7 @@ export default function Navbar() {
 
       {/* Right Section for Log in/Sign up */}
       <div className="hidden md:flex space-x-4 mr-5">
-        <a href="#" className="login-link">Log in</a>
+        <button className="login-link" onClick={() => alert('Log in clicked')}>Log in</button>
         <button className="bg-black text-white py-2 px-4 rounded-full glow-button sign-up-button">
           Sign up
         </button>
@@ -66,13 +66,13 @@ export default function Navbar() {
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-75 z-40 flex flex-col items-center justify-center space-y-6 md:hidden">
           {NAV_LINKS.map((link, index) => (
-            <a key={index} href={link.link} onClick={() => setIsOpen(false)} className="text-white text-2xl">
+            <button key={index} onClick={() => setIsOpen(false)} className="text-white text-2xl">
               {link.title}
-            </a>
+            </button>
           ))}
-          <a href="#" onClick={() => setIsOpen(false)} className="text-white text-2xl">
+          <button onClick={() => setIsOpen(false)} className="text-white text-2xl">
             Log in
-          </a>
+          </button>
           <button className="bg-black text-white py-2 px-4 rounded-full glow-button" onClick={() => setIsOpen(false)}>
             Sign up
           </button>
