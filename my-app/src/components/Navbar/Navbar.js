@@ -1,5 +1,3 @@
-// src/Navbar.js
-
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file
 
@@ -7,15 +5,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const NAV_LINKS = [
-    { title: 'About Us' },
-    { title: 'Community' },
-    { title: 'Blog' },
-    { title: 'Contact' },
-    { title: 'Other' }
+    { title: 'About Us', link: '/about' },
+    { title: 'Community', link: '/community' },
+    { title: 'Blog', link: '/blog' },
+    { title: 'Contact', link: '/contact' },
+    { title: 'Other', link: '/other' }
   ];
 
   const NAV_CLASS = "bg-black text-white p-4 flex justify-between items-center glow-navbar";
-  const BUTTON_CLASS = "focus:outline-none flex items-center glow-button";
   const GROUP_CLASS = "relative group";
   const CENTER_CONTAINER_CLASS = "hidden md:flex justify-center items-center space-x-4 ml-9"; // Adjusted for desktop view
 
@@ -45,7 +42,7 @@ export default function Navbar() {
       <div className={CENTER_CONTAINER_CLASS}>
         {NAV_LINKS.map((link, index) => (
           <div key={index} className={GROUP_CLASS}>
-            <a href="#" className="glow-nav-link">
+            <a href={link.link} className="glow-nav-link">
               {link.title}
               <span>
                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,10 +56,8 @@ export default function Navbar() {
 
       {/* Right Section for Log in/Sign up */}
       <div className="hidden md:flex space-x-4 mr-5">
-        <a href="#" className="login-link">Log in</a> {/* Simple link without glow */}
-        <button
-          className="bg-black text-white py-2 px-4 rounded-full glow-button sign-up-button" // Restored class names for sign-up button
-        >
+        <a href="#" className="login-link">Log in</a>
+        <button className="bg-black text-white py-2 px-4 rounded-full glow-button sign-up-button">
           Sign up
         </button>
       </div>
@@ -71,17 +66,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-75 z-40 flex flex-col items-center justify-center space-y-6 md:hidden">
           {NAV_LINKS.map((link, index) => (
-            <button key={index} onClick={() => setIsOpen(false)} className="text-white text-2xl">
+            <a key={index} href={link.link} onClick={() => setIsOpen(false)} className="text-white text-2xl">
               {link.title}
-            </button>
+            </a>
           ))}
-          <button onClick={() => setIsOpen(false)} className="text-white text-2xl">
+          <a href="#" onClick={() => setIsOpen(false)} className="text-white text-2xl">
             Log in
-          </button>
-          <button
-            className="bg-black text-white py-2 px-4 rounded-full glow-button"
-            onClick={() => setIsOpen(false)}
-          >
+          </a>
+          <button className="bg-black text-white py-2 px-4 rounded-full glow-button" onClick={() => setIsOpen(false)}>
             Sign up
           </button>
         </div>

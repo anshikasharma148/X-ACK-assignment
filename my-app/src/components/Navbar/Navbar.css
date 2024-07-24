@@ -2,79 +2,78 @@
 
 /* General Navbar Glow Effect */
 .glow-navbar {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-  }
-  
-  /* Glow Effect for Buttons */
-  .glow-button {
-    transition: all 0.3s ease;
-  }
-  
-  .glow-button:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  }
-  
-  /* Rounded Button-Like Glow Effect for Nav Links */
-  .glow-nav-link {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 15px;
-    border-radius: 45px; /* Rounded corners for button-like appearance */
-    transition: box-shadow 0.3s ease;
-    color: white; /* Ensure text color is white */
-    text-decoration: none; /* Remove default button styles */
-    background-color: transparent; /* Ensure the background is transparent */
-  }
-  
-  .glow-nav-link span {
-    margin-left: 8px; /* Space between text and arrow */
-  }
-  
-  .glow-nav-link::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 20px; /* Ensure the glow follows the rounded corners */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-    opacity: 0; /* Start with no glow */
-    transition: opacity 0.3s ease;
-  }
-  
-  .glow-nav-link:hover::before {
-    opacity: 1; /* Show glow on hover */
-  }
-  
-  /* Styling for Log in link to match nav links without glow */
-  .login-link {
-    padding: 10px 15px; /* Match padding with nav links */
-    border-radius: 20px; /* Match rounded corners */
-    color: white; /* Ensure text color is white */
-    text-decoration: none; /* Remove default button styles */
-    transition: color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .login-link:hover {
-    color: rgba(255, 255, 255, 0.8); /* Simple color change on hover */
-  }
-  
-  /* Revert to original styling for Sign up button */
-  .sign-up-button {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-  }
-  
-  .sign-up-button:hover {
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-  }
-  
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Glow Effect for Buttons */
+.glow-button {
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Rounded Button-Like Glow Effect for Nav Links */
+.glow-nav-link {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 25px; /* Increased rounded corners for button-like appearance */
+  transition: box-shadow 0.3s ease;
+  color: white; /* Ensure text color is white */
+  text-decoration: none; /* Remove default button styles */
+  background-color: transparent; /* Ensure the background is transparent */
+}
+
+.glow-nav-link span {
+  margin-left: 8px; /* Space between text and arrow */
+}
+
+.glow-nav-link::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 25px; /* Increased rounded corners for the glow effect */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  opacity: 0; /* Start with no glow */
+  transition: opacity 0.3s ease;
+}
+
+.glow-nav-link:hover::before {
+  opacity: 1; /* Show glow on hover */
+}
+
+/* Styling for Log in link to match nav links without glow */
+.login-link {
+  padding: 10px 15px; /* Match padding with nav links */
+  border-radius: 25px; /* Increased rounded corners to match nav links */
+  color: white; /* Ensure text color is white */
+  text-decoration: none; /* Remove default button styles */
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-link:hover {
+  color: rgba(255, 255, 255, 0.8); /* Simple color change on hover */
+}
+
+/* Revert to original styling for Sign up button */
+.sign-up-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px; /* Increased rounded corners to match nav links */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.sign-up-button:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+}

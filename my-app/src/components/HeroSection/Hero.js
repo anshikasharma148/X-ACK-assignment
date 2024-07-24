@@ -73,18 +73,20 @@ const MainComponent = () => {
         <div className="bg-black w-full h-1/3"></div>
       </div>
       <div className="absolute top-0 left-0">
-        <img
-          src={leftImage}
-          alt="Left Image"
-          className="w-[315px] h-[305px] rounded-lg shadow-lg hidden md:block"
-        />
+      <img
+  src={leftImage}
+  alt="Illustration on the left side"
+  className="w-[315px] h-[305px] rounded-lg shadow-lg hidden md:block"
+/>
+
       </div>
       <div className="absolute top-0 right-0">
-        <img
-          src={rightImage}
-          alt="Right Image"
-          className="w-[315px] h-[305px] rounded-lg shadow-lg hidden md:block"
-        />
+      <img
+  src={rightImage}
+  alt="Illustration on the right side"
+  className="w-[315px] h-[305px] rounded-lg shadow-lg hidden md:block"
+/>
+
       </div>
       <div
         className="absolute right-0 top-0 w-full h-full"
@@ -118,11 +120,12 @@ const MainComponent = () => {
           </button>
         </div>
         <div className="relative mt-8">
-          <img
-            src={dashboard}
-            alt="Main Image"
-            className="rounded-lg shadow-lg w-full md:w-auto"
-          />
+        <img
+  src={dashboard}
+  alt="Main content overview"
+  className="rounded-lg shadow-lg w-full md:w-auto"
+/>
+
         </div>
       </div>
     </div>
